@@ -1,0 +1,45 @@
+
+Project Description:  
+This project is a C executable that will look for the Bricasti Streamer(s), connected to the network.  The streamer device name is AeVeeStreamer.  It will then get the IP address IPv4, and launch the streamer's server web page.
+This project uses the system() to spawn a shell and run basic command line commands.  Ping and touch.  Ping is used to get the IP address.
+
+Tools:  
+Visual Studio Community 2017  version 15.1(26403.)  (https://www.visualstudio.com/downloads/ )
+a: Run Installer.  It will create and setup IDE.
+
+Installer:
+a: desktop shortcut to  "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"
+b: Launch Installer.  Modules selected to be installed:".NET deskop development"  "Desktop development with C++".  Click Install.  IDE is created and Setup for with these Module capabilities.
+c: To add more modules or repair: Re-launch installer: click on small icon for "Additional Choices"  next to UPDATE LAUNCH, choose Modify and select any MODULES to be installed, etc.
+
+IDE:
+a: see desktop shortcut to  "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
+b: Create a new C Project (https://www.youtube.com/watch?v=YOLN-t09-tM)
+	i: launch VS
+	ii: Click on File-->New Project: Select Visual C++ template and highlight Win32 Console Application (give it a name and click OK)
+	iii: On the pop-up window:  Hit next.  check Empty Project.  Click Finish
+	iv: In Solution Explorer, Right Click on soure Files and select Add-->New Item. 
+	v: Select C++ File(.cpp), and add Name, using a .c extension.  (ie main.c).  Hit Add.
+	vi: Open main.c and past any test that you have.  
+	vii: Rinse and Repeat for multiple files
+c:  Import an Existing C project:  
+	TBD
+
+Run:
+a: executable is in Debug folder.  It can be run by double clicking or from Within IDE.
+		
+
+git Init 
+a: https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+a: go to Remote Repo: https://github.com/aeveelab/BricastiStreamerSetup    navigate to Repositories page and Select New.  copy "URL".
+b: Create New C Project, as described above.  Compile and get ready for initial commit.
+c: Open terminal (CMD) and cd to working directory.
+d: $ git init
+e: $ git add .  // if using .gitignore   (Else one at a time)   $ git add foldername OR $ git add filename
+f: $ git commit -m "First commit"
+g: $ git remote add origin "URL"
+h: $ git remote -v
+i: $ git push -u origin master
+a: Init github repo
+b: Init local repo
+c: First commit
