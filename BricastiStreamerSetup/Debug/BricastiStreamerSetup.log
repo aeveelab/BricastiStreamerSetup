@@ -1,0 +1,8 @@
+﻿  Main.c
+c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricastistreamersetup\main.c(30): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\string.h(93): note: see declaration of 'strcat'
+c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricastistreamersetup\main.c(13): warning C4101: 'tracker': unreferenced local variable
+c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricastistreamersetup\main.c(43): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  BricastiStreamerSetup.vcxproj -> c:\users\ed\documents\visual studio 2017\Projects\BricastiStreamerSetup\Debug\BricastiStreamerSetup.exe
+  BricastiStreamerSetup.vcxproj -> c:\users\ed\documents\visual studio 2017\Projects\BricastiStreamerSetup\Debug\BricastiStreamerSetup.pdb (Partial PDB)
