@@ -43,3 +43,67 @@ i: $ git push -u origin master
 a: Init github repo
 b: Init local repo
 c: First commit
+
+
+MSI creation from EXE
+a: ucrtbased.dll  get rid of it.
+a: changed default install location from Projectfolder to directly in C:
+b: 
+[ProgramFilesFolder][Manufacturer]\[ProductName]  c:\[Manufacturer]\[ProductName]
+Setup.VDPROJ file: 
+
+        "MsiBootstrapper"
+        {
+        "LangId" = "3:1033"
+        "RequiresElevation" = "11:FALSE"		// TRUE
+        }
+c: some "custom actions"
+
+d: add shortcut to desktop
+	Filesystem (setup)
+	Application Folder
+		highlight primary output
+		click on Action item in Top line, : create shortcut to primary output
+		rename it and then drag it to the left into the User's Desktop folder.
+		
+permissions
+https://stackoverflow.com/questions/7443930/how-to-make-the-setup-exe-from-a-vs2010-setup-project-ask-for-admin-privileges
+https://msdn.microsoft.com/library/2kt85ked(v=vs.100).aspx
+https://stackoverflow.com/questions/7881390/folder-permissions-full-control-granted-to-all-users
+https://msdn.microsoft.com/en-us/library/d9k65z2d(v=vs.100).aspx
+https://msdn.microsoft.com/en-us/library/k3bb4tfd(v=vs.100).aspx
+https://stackoverflow.com/questions/7288444/how-to-give-read-write-permissions-to-a-folder-during-installation-using-net
+
+shortcuts
+https://stackoverflow.com/questions/3028263/changing-the-default-installation-path-in-windows-application
+
+MSI notes
+https://www.youtube.com/watch?v=tGCuYwVzPFM
+
+ucrtbased.dll
+https://stackoverflow.com/questions/37398/how-do-i-make-a-fully-statically-linked-exe-with-visual-studio-express-2005
+virtual studio 2017 static linking ucrtbased.a
+
+Create MSI
+a:  https://www.youtube.com/watch?v=tGCuYwVzPFM  	// tutorial, watch this
+a: https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2017InstallerProjects
+in case you need the installer project type.
+b: Open VS with the project that you want to bundle it’s exe to MSI
+c: File Add New Project 
+d: choose other project types: visual studio installer,
+e: Then select setup wizard.
+f: remove the 1 from name, and add new folder to project folder called /setupWizard, hit okay
+g: hit next
+h: select windows application , and select primary output, hit next
+I; additional file
+k: next and finish.
+l: do the shortcut from above
+m:  right click on setup —> view
+n: go to Setup properties
+o:  Install for all user —> true
+p: Manufacturer:  Bricasti
+q: product name : Bricasti Streamer setup
+r: make sure App is build correctly
+s: highlight setup and right click , select build.   
+t: MSI is in setup folder/Debug
+
