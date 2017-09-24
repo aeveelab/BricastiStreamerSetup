@@ -17,6 +17,10 @@ int parse_ping_for_IP(char * buffer, FILE * fp)
 	fread(buff_1, 99, 1, fp);
 	printf("\n\n this is the buffer %s\n\n\n", buff_1);
 
+	// check if no streamer is connected to network
+	start_ptr = strstr(buff_1, "could not find");
+	if (start_ptr != NULL) return 0;
+
 	// get ptrs to IP address in ping response
 	start_ptr = strstr(buff_1, "[");
 	end_ptr = strstr(buff_1, "]");
@@ -43,9 +47,9 @@ int main(void)
 	if ((fp = fopen("temp.txt", "r")) == NULL) return (-1);
 
 	// ping and check for any streamer, exit if not
-	system("/WINDOWS/System32/ping.exe -a office_2 -4 > temp.txt");		// was AeVeeStreamer : ping host/domain for IPv4 IP address -a maybe reverse dns lookup
+	system("/WINDOWS/System32/ping.exe -a office_1 -4 > temp.txt");		// was AeVeeStreamer : ping host/domain for IPv4 IP address -a maybe reverse dns lookup
 	//    system("ping -a AeVeeStreamer > temp.txt");
-
+ 
 	// streamer present get IP address(s)
 	parse_ping_for_IP(&buffer[18], fp);
 	printf("this is IP buffer: %s\n\n", buffer);
