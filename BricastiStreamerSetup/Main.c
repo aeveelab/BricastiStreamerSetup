@@ -47,7 +47,7 @@ int main(void)
 	if ((fp = fopen("temp.txt", "r")) == NULL) return (-1);
 
 	// ping and check for any streamer, exit if not
-	system("/WINDOWS/System32/ping.exe -a office_1 -4 > temp.txt");		// was AeVeeStreamer : ping host/domain for IPv4 IP address -a maybe reverse dns lookup
+	system("/WINDOWS/System32/ping.exe -a AeVeeStreamer -4 > temp.txt");		// was AeVeeStreamer : ping host/domain for IPv4 IP address -a maybe reverse dns lookup
 	//    system("ping -a AeVeeStreamer > temp.txt");
  
 	// streamer present get IP address(s)
