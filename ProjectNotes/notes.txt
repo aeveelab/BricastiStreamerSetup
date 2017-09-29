@@ -51,6 +51,10 @@ a: Init github repo
 b: Init local repo
 c: First commit
 
+standard git command sequence
+C:\Users\ed\Documents\Visual Studio 2017\Projects\BricastiStreamerSetup> git add BricastiStreamerSetup SetupWizard
+C:\Users\ed\Documents\Visual Studio 2017\Projects\BricastiStreamerSetup> git comit -m "add message"
+C:\Users\ed\Documents\Visual Studio 2017\Projects\BricastiStreamerSetup> git push -u origin master
 
 MSI creation from EXE
 a: ucrtbased.dll  get rid of it.
