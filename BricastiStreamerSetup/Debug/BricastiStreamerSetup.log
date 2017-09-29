@@ -4,5 +4,6 @@ c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricasti
 c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricastistreamersetup\main.c(13): warning C4101: 'tracker': unreferenced local variable
 c:\users\ed\documents\visual studio 2017\projects\bricastistreamersetup\bricastistreamersetup\main.c(47): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+LINK : warning LNK4044: unrecognized option '/WHOLEARCHIVE[:library]'; ignored
   BricastiStreamerSetup.vcxproj -> C:\Users\ed\Documents\Visual Studio 2017\Projects\BricastiStreamerSetup\Debug\BricastiStreamerSetup.exe
   BricastiStreamerSetup.vcxproj -> C:\Users\ed\Documents\Visual Studio 2017\Projects\BricastiStreamerSetup\Debug\BricastiStreamerSetup.pdb (Partial PDB)

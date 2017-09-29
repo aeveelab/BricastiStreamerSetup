@@ -25,6 +25,13 @@ b: Create a new C Project (https://www.youtube.com/watch?v=YOLN-t09-tM)
 c:  Import an Existing C project:  
 	TBD
 
+Build
+a: To build statically, no dynamic lib dependencies.
+b: Bring up properties window for project app
+c: Configuration Properties --> Linker --> Command Line
+d: In additional Options add   /WHOLEARCHIVE[:library]
+
+
 Run:
 a: executable is in Debug folder.  It can be run by double clicking or from Within IDE.
 		
