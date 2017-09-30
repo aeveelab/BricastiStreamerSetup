@@ -25,15 +25,19 @@ b: Create a new C Project (https://www.youtube.com/watch?v=YOLN-t09-tM)
 c:  Import an Existing C project:  
 	TBD
 
-Build
-a: To build statically, no dynamic lib dependencies.
+Build (STATIC BUILD) --  https://msdn.microsoft.com/en-us/library/mt732963.aspx
+a: To build statically, no dynamic C runtime lib dependencies.
 b: Bring up properties window for project app
-c: Configuration Properties --> Linker --> Command Line
-d: In additional Options add   /WHOLEARCHIVE[:library]
+c: Configuration Properties --> C/C++ --> Code Generation : Runtime Library 
+d: Select Multi-Threaded Debug (/MTd)
+
+For other libs might have to had them seperately: But not sure this is fully accurate or supported.
+e: Configuration Properties --> Linker --> Command Line
+f: In additional Options add   /WHOLEARCHIVE[:library]
 
 
 Run:
-a: executable is in Debug folder.  It can be run by double clicking or from Within IDE.
+a: executable is in /home_folder/Debug folder.  It can be run by double clicking or from Within IDE.
 		
 
 git Init 
