@@ -7,19 +7,23 @@
 
 int parse_ping_for_IP(char * buffer, FILE * fp)
 {
-	char buff_1[100] = { '0' };
+	char buff_1[200] = { '0' };
 	char * start_ptr = NULL;
 	char * end_ptr = NULL;
 	char * tracker;
 	int i = 0;
 
 	// setup ptrs to the IP address
-	fread(buff_1, 99, 1, fp);
+	fread(buff_1, 199, 1, fp);
 //	printf("\nLooking for Bricasti Streamer on Local Network\n");
 //	printf("\n\n this is the buffer %s\n\n\n", buff_1);
 
 	// check if no streamer is connected to network
 	start_ptr = strstr(buff_1, "could not find");
+	if (start_ptr != NULL) return 0;
+
+	// check if no streamer is connected to network
+	start_ptr = strstr(buff_1, "host unreachable");
 	if (start_ptr != NULL) return 0;
 
 	// get ptrs to IP address in ping response
